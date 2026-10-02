@@ -1,0 +1,467 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f4f5;
+    color: #333;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    width: 100%;
+    background-color: #72162b;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #f3c6d0;
+}
+
+
+/* =========================
+   MENÚ PRINCIPAL
+========================= */
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+
+/* Línea que aparece debajo */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #f3c6d0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f3c6d0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   SECCIÓN DE BIENVENIDA
+========================= */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #72162b;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 28px;
+    background-color: white;
+    color: #72162b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f3c6d0;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.categorias {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+
+/* Título principal */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: #72162b;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+/* =========================
+   CADA GÉNERO
+========================= */
+.categoria {
+    margin-bottom: 80px;
+
+    /* Evita que el menú tape el título */
+    scroll-margin-top: 90px;
+}
+
+
+/* Título del género */
+
+.categoria > h2 {
+    color: #72162b;
+    font-size: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #72162b;
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+/* Efecto al pasar el ratón */
+.categoria > h2:hover {
+    color: #a83c57;
+    padding-left: 8px;
+}
+
+
+/* =========================
+   LIBROS
+========================= */
+.libros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   TARJETAS DE LIBROS
+========================= */
+.libro {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #72162b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efecto al pasar el ratón */
+.libro:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(114, 22, 43, 0.18);
+}
+
+
+/* Título del libro */
+
+.libro h3 {
+    color: #72162b;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* Texto del libro */
+.libro p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    color: #555;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+footer {
+    background-color: #3d0b19;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================
+   MINI MENÚ
+========================= */
+.mini-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #72162b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 2000;
+  
+    /* Oculto inicialmente */
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+
+/* Cuando aparece */
+.mini-menu.mostrar {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   LOGO DEL MINI MENÚ
+========================= */
+.mini-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: transform 0.2s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   MENÚ DESPLEGABLE
+========================= */
+.menu-desplegable {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    width: 220px;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    z-index: 1999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    /* Oculto inicialmente */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* Menú abierto */
+.menu-desplegable.abierto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* Enlaces del menú */
+
+.menu-desplegable a {
+    color: #72162b;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    transition:
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+/* Hover */
+.menu-desplegable a:hover {
+    background-color: #f7f2f3;
+    color: #a83c57;
+    padding-left: 25px;
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+    .libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+@media (max-width: 600px) {
+    .navbar {
+        width: 95%;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .libros {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .categoria > h2 {
+        font-size: 26px;
+    }
+
+    .mini-menu {
+        height: 60px;
+    }
+
+    .menu-desplegable {
+        top: 60px;
+        right: 10px;
+        width: 200px;
+    }
+
+}
